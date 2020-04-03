@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="style.css">
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&display=swap"
+    rel="stylesheet">
+
+  <title>Date and Time</title>
+</head>
+
+<body id="myDiv">
+  <div class="text-center mb-3" id="todaysDate"></div>
+  <div class="text-center fs-30" id="todaysTime"></div>
+
+  <script>
+    function doDate() {
+      var strDate = "";
+      var strTime = "";
+
+      var days = new Array("Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat");
+      var months = new Array("Jan", "Feb", "Mar", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec");
+
+      var now = new Date();
+      let tempCurHour = now.getHours();
+      let tempCurMin = now.getMinutes();
+      let tempCurSec = now.getSeconds();
+      if (tempCurHour < '10') {
+        tempCurHour = '0' + tempCurHour
+      }
+      if (tempCurMin < '10') {
+        tempCurMin = '0' + tempCurMin
+      }
+      if (tempCurSec < '10') {
+        tempCurSec = '0' + tempCurSec
+      }
+
+      strDate += days[now.getDay()] + ", " + now.getDate() + " " + months[now.getMonth()] + " " + now.getFullYear();
+      strTime += tempCurHour + ":" + tempCurMin + ":" + tempCurSec;
+      document.getElementById("todaysDate").innerHTML = strDate;
+      document.getElementById("todaysTime").innerHTML = strTime;
+
+    }
+    setInterval(doDate, 1000);
+  </script>
+</body>
+</html>
