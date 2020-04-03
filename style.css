@@ -26,4 +26,9 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
+.open-close-btn button {
+  background-color: #000;
+  border: 0.001rem solid #232323;
+}
 /*# sourceMappingURL=style.css.map */

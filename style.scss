@@ -1,3 +1,7 @@
+$white: #ffffff;
+$black: #000;
+$border-dark: #232323;
+
 * {
   margin: 0;
 }
@@ -14,5 +18,13 @@ body {
 #myDiv{
   font-size: 5rem;
   text-align: center;
-  color: #ffffff;
+  color: $white;
+}
+
+.open-close-btn {
+
+  button{
+    background-color: $black;
+    border: 0.001rem solid $border-dark;
+  }
 }
