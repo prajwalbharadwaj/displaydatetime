@@ -22,9 +22,18 @@ body {
 }
 
 #myDiv {
-  font-size: 5rem;
   text-align: center;
   color: #ffffff;
+}
+
+#myDiv .display-text {
+  font-size: 5rem;
+}
+
+.open-close-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .open-close-btn button {

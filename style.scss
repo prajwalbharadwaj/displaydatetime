@@ -16,13 +16,17 @@ body {
   font-family: 'Nunito';
 }
 #myDiv{
-  font-size: 5rem;
   text-align: center;
   color: $white;
+  .display-text {
+    font-size: 5rem;
+  }
 }
 
 .open-close-btn {
-
+  position: absolute;
+  top: 0;
+  left: 0;
   button{
     background-color: $black;
     border: 0.001rem solid $border-dark;
